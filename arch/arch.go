@@ -50,7 +50,8 @@ func main() {
 
 	// is there a cleaner way to find the null bytes?
 	n := 0
-	found: for ; n < len(utsname.Machine); n++ {
+found:
+	for ; n < len(utsname.Machine); n++ {
 		if 0 == utsname.Machine[n] {
 			break found
 		}
