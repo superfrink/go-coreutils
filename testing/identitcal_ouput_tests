@@ -1,0 +1,44 @@
+#! /bin/bash
+
+echo Running tests in `pwd`
+
+PROGRAM1=`cat program1`
+if [[ 0 -ne $? ]]; then
+    echo Error file not found: program1
+    exit 1
+fi
+PROGRAM2=`cat program2`
+if [ 0 -ne $? ]; then
+    echo Error file not found: program2
+    exit 1
+fi
+
+for program in $PROGRAM1 $PROGRAM2 ; do
+    if ! [ -x $program ] ; then
+       echo Error file does not exist: $program
+       exit 1
+    fi
+done
+
+declare -i test_number=1
+for argument in `cat identical_output_test_cases` ; do
+    echo Test number $test_number
+
+    output1="output_test${test_number}_program1"
+    output2="output_test${test_number}_program2"
+
+    if [ "#NO_ARGS_TEST#" == $argument ] ; then argument="" ; fi
+
+    echo $PROGRAM1 $argument '>' $output1
+    $PROGRAM1 $argument > $output1
+
+    echo $PROGRAM2 $argument '>' $output2
+    $PROGRAM2 $argument > $output2
+
+    cmp $output1 $output2
+    if [ 0 -ne $? ]; then
+       echo Failed test $test_number.  Output does not match.  $output1 $output2
+    fi
+
+    ((test_number++))
+done
