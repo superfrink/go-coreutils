@@ -9,7 +9,7 @@ package main
 import "flag"
 import "fmt"
 import "os"
-import "runtime"
+import "syscall"
 
 const (
 	help_text string = `
@@ -45,6 +45,15 @@ func main() {
 		os.Exit(0)
 	}
 
-	fmt.Println(runtime.GOARCH)
+	var utsname syscall.Utsname
+	syscall.Uname(&utsname)
 
+	// is there a cleaner way to find the null bytes?
+	n := 0
+	found: for ; n < len(utsname.Machine); n++ {
+		if 0 == utsname.Machine[n] {
+			break found
+		}
+	}
+	fmt.Printf("%s\n", string(utsname.Machine[:n]))
 }
