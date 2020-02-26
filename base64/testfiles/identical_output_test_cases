@@ -1,0 +1,16 @@
+< input1
+< input2
+input1
+input2
+-w 0 < input2
+-w 10 < input2
+--wrap=10 < input2
+-w 100 < input2
+-d < input3
+--decode < input3
+-d < input1
+-d -i < input3
+-d < input4
+-d -i < input4
+-d < input5
+-d -i < input5
