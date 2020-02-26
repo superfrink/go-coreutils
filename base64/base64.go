@@ -90,6 +90,7 @@ func main() {
 		encFunc = base64.StdEncoding.Encode
 	)
 
+	trailingString := "\n"
 	if *decode {
 		dst = make([]byte, base64.StdEncoding.DecodedLen(len(bytes)))
 		encFunc = func(dst, src []byte) {
@@ -99,13 +100,23 @@ func main() {
 				os.Exit(1)
 			}
 		}
+		trailingString = ""
 	}
 
 	encFunc(dst, bytes)
 
-	dstString := string(dst)
+	// DOC: After decode there may be null bytes at the end.
+	n := 0
+	for ; n < len(dst); n++ {
+		if 0 == dst[n] {
+			// null byte found
+			break
+		}
+	}
+	dstString := string(dst[:n])
+
 	if *wrap == 0 {
-		fmt.Println(dstString)
+		fmt.Print(dstString)
 		return
 	}
 
@@ -114,6 +125,9 @@ func main() {
 		fmt.Println(dstString[i : i+*wrap])
 	}
 	if i < len(dstString) {
-		fmt.Println(dstString[i:])
+
+		fmt.Print(dstString[i:])
 	}
+
+	fmt.Print(trailingString)
 }
