@@ -23,7 +23,7 @@ const (
 
       --help                 Display this message.
       ---version             Display version information.
-      -D, --decode           Change the mode of operation, from the default of
+      -d, --decode           Change the mode of operation, from the default of
                              encoding data, to decoding data. Input is expected
                              to be base64 encoded data, and the output will be
                              the original data.
@@ -51,7 +51,7 @@ var (
 )
 
 func init() {
-	flag.BoolVar(decode, "D", false, "decodes input")
+	flag.BoolVar(decode, "d", false, "decodes input")
 	flag.IntVar(wrap, "w", 0, "wraps lines after 'wrap' columns")
 	flag.BoolVar(ignoreGarbage, "i", false, "ignore unrecognized bytes")
 }
