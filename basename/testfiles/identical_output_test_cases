@@ -1,0 +1,15 @@
+foo
+/etc/hosts
+/etc/resolv.conf
+resolv.conf
+/usr/bin/sort
+include/stdio.h .h
+-s .h include/stdio.h
+--suffix=.h include/stdio.h
+-a any/str1 any/str2
+--multiple any/str1 any/str2
+foo bar
+-z /foo/bar.baz
+--zero /foo/bar.baz
+-z -a any/str1 any/str2
+-s .baz -z /foo/bar.baz
