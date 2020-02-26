@@ -6,4 +6,4 @@ clean:
 	rm -f testfiles/output_test*_program*
 
 test:
-	cd testfiles && ../../testing/compare_ouput_argument_cases
+	cd testfiles && ../../testing/identitcal_ouput_tests

@@ -1,5 +1,20 @@
 #! /bin/bash
+#
+# DOC: This program compares the output from two programs to see if they
+# produce identical output.  Configuration is done using the following
+# files found in the current directory.
+#
+#   program1 - name (with optional path) to the first program
+#   program2 - name (with optional path) to the second program
+#   identical_output_test_cases - command line arguments, one test per line
 
+
+# ANSI font color codes:
+RED='\033[0;31m'
+NORMAL='\033[0m'
+
+
+# GOAL: Get the programs to be used in the tests.
 echo Running tests in `pwd`
 
 PROGRAM1=`cat program1`
@@ -20,24 +35,28 @@ for program in $PROGRAM1 $PROGRAM2 ; do
     fi
 done
 
+# GOAL: Run each test case.
 declare -i test_number=1
-for argument in `cat identical_output_test_cases` ; do
-    echo Test number $test_number
+cat identical_output_test_cases | while read argument ; do
+
+    echo Running test $test_number , case: $argument
 
     output1="output_test${test_number}_program1"
     output2="output_test${test_number}_program2"
 
-    if [ "#NO_ARGS_TEST#" == $argument ] ; then argument="" ; fi
+    if [ "#NO_ARGS_TEST#" == "$argument" ] ; then argument="" ; fi
 
-    echo $PROGRAM1 $argument '>' $output1
-    $PROGRAM1 $argument > $output1
+    cmd="$PROGRAM1 $argument > $output1"
+    #echo $cmd
+    /bin/sh -c "$cmd"
 
-    echo $PROGRAM2 $argument '>' $output2
-    $PROGRAM2 $argument > $output2
+    cmd="$PROGRAM2 $argument > $output2"
+    #echo $cmd
+    /bin/sh -c "$cmd"
 
     cmp $output1 $output2
     if [ 0 -ne $? ]; then
-       echo Failed test $test_number.  Output does not match.  $output1 $output2
+       echo -e ${RED}Failed test $test_number.${NORMAL}  Output files do not match - $output1 $output2 , case: $argument
     fi
 
     ((test_number++))
