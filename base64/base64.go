@@ -45,14 +45,14 @@ const (
 var (
 	ignoreGarbage = flag.Bool("ignore-garbage", false, "enables additional output to stderr")
 	decode        = flag.Bool("decode", false, "decodes input")
-	wrap          = flag.Int("wrap", 0, "wrap lines after 'wrap' columns")
+	wrap          = flag.Int("wrap", 76, "wrap lines after 'wrap' columns")
 	help          = flag.Bool("help", false, help_text)
 	version       = flag.Bool("version", false, version_text)
 )
 
 func init() {
 	flag.BoolVar(decode, "d", false, "decodes input")
-	flag.IntVar(wrap, "w", 0, "wraps lines after 'wrap' columns")
+	flag.IntVar(wrap, "w", 76, "wraps lines after 'wrap' columns")
 	flag.BoolVar(ignoreGarbage, "i", false, "ignore unrecognized bytes")
 }
 
