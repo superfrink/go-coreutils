@@ -1,4 +1,4 @@
-rmdir:
+rmdir: rmdir.go
 	go build -o rmdir rmdir.go
 
 clean:

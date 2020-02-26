@@ -1,4 +1,4 @@
-stat:
+stat: stat.go
 	go build -o stat stat.go
 
 clean:

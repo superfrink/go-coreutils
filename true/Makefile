@@ -1,4 +1,4 @@
-true:
+true: true.go
 	go build -o true true.go
 
 clean:

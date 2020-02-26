@@ -1,4 +1,4 @@
-mkdir:
+mkdir: mkdir.go
 	go build -o mkdir mkdir.go
 
 clean:

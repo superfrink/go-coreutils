@@ -1,4 +1,4 @@
-echo:
+echo: echo.go
 	go build -o echo echo.go
 
 clean:

@@ -1,4 +1,4 @@
-mv:
+mv: mv.go
 	go build -o mv mv.go
 
 clean:

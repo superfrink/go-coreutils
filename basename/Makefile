@@ -1,4 +1,4 @@
-basename:
+basename: basename.go
 	go build -o basename basename.go
 
 clean:

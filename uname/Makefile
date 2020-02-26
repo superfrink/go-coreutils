@@ -1,4 +1,4 @@
-uname:
+uname: uname.go
 	go build -o uname uname.go
 
 clean:

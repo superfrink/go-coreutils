@@ -1,4 +1,4 @@
-dirname:
+dirname: dirname.go
 	go build -o dirname dirname.go
 
 clean:

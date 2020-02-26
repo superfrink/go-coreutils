@@ -1,4 +1,4 @@
-sha1sum:
+sha1sum: sha1sum.go
 	go build -o sha1sum sha1sum.go
 
 clean:

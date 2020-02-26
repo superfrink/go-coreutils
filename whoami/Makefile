@@ -1,4 +1,4 @@
-whoami:
+whoami: whoami.go
 	go build -o whoami whoami.go
 
 clean:

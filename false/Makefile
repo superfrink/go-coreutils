@@ -1,4 +1,4 @@
-false:
+false: false.go
 	go build -o false false.go
 
 clean:

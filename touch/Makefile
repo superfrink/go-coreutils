@@ -1,4 +1,4 @@
-touch:
+touch: touch.go
 	go build -o touch touch.go
 
 clean:

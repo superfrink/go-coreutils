@@ -1,4 +1,4 @@
-logname:
+logname: logname.go
 	go build -o logname logname.go
 
 clean:

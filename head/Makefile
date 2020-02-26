@@ -1,4 +1,4 @@
-head:
+head: head.go
 	go build -o head head.go
 
 clean:

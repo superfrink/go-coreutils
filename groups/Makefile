@@ -1,4 +1,4 @@
-groups:
+groups: groups.go
 	go build -o groups groups.go
 
 clean:

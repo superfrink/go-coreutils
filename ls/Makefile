@@ -1,4 +1,4 @@
-ls:
+ls: ls.go
 	go build -o ls ls.go
 
 clean:

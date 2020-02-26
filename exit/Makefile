@@ -1,4 +1,4 @@
-exit:
+exit: exit.go
 	go build -o exit exit.go
 
 clean:

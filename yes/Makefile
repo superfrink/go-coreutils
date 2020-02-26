@@ -1,4 +1,4 @@
-yes:
+yes: yes.go
 	go build -o yes yes.go
 
 clean:

@@ -1,4 +1,4 @@
-tsort:
+tsort: tsort.go
 	go build -o tsort tsort.go
 
 clean:

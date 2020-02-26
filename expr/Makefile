@@ -1,4 +1,4 @@
-expr:
+expr: expr.go
 	go build -o expr expr.go
 
 clean:

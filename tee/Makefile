@@ -1,4 +1,4 @@
-tee:
+tee: tee.go
 	go build -o tee tee.go
 
 clean:

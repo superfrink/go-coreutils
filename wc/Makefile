@@ -1,4 +1,4 @@
-wc:
+wc: wc.go
 	go build -o wc wc.go
 
 clean:

@@ -1,4 +1,4 @@
-sync:
+sync: sync.go
 	go build -o sync sync.go
 
 clean:

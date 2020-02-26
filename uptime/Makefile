@@ -1,4 +1,4 @@
-uptime:
+uptime: uptime.go
 	go build -o uptime uptime.go
 
 clean:

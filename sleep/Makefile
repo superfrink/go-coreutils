@@ -1,4 +1,4 @@
-sleep:
+sleep: sleep.go
 	go build -o sleep sleep.go
 
 clean:

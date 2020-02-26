@@ -1,4 +1,4 @@
-env:
+env: env.go
 	go build -o env env.go
 
 clean:

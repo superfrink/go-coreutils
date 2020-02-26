@@ -1,4 +1,4 @@
-date:
+date: date.go
 	go build -o date date.go
 
 clean:

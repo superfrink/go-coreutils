@@ -1,4 +1,4 @@
-rm:
+rm: rm.go
 	go build -o rm rm.go
 
 clean:

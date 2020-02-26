@@ -1,4 +1,4 @@
-pwd:
+pwd: pwd.go
 	go build -o pwd pwd.go
 
 clean:

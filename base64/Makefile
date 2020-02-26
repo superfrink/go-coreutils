@@ -1,4 +1,4 @@
-base64:
+base64: base64.go
 	go build -o base64 base64.go
 
 clean:

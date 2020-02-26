@@ -1,4 +1,4 @@
-factor:
+factor: factor.go
 	go build -o factor factor.go
 
 clean:

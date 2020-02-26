@@ -1,4 +1,4 @@
-tail:
+tail: tail.go
 	go build -o tail tail.go
 
 clean:

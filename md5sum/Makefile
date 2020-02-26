@@ -1,4 +1,4 @@
-md5sum:
+md5sum: md5sum.go
 	go build -o md5sum md5sum.go
 
 clean:

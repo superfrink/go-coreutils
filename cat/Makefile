@@ -1,4 +1,4 @@
-cat:
+cat: cat.go
 	go build -o cat cat.go
 
 clean:
