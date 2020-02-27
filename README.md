@@ -31,6 +31,111 @@ binary sizes by 18.73% for this project (63.2 MiB to 51.4 MiB).
 
 
 
+### Compatibility
+
+|   | GNU coreutils |
+|---|---------------|
+| arch | yes, GNU version 8.30 |
+| base64 | no, -d not handling invalid input |
+| basename | yes, GNU version 8.30 |
+| cat | |
+| chcon | |
+| chgrp | |
+| chown | |
+| chmod | |
+| chroot | |
+| cksum | |
+| comm | |
+| cp | |
+| csplit | |
+| cut | |
+| date | |
+| dd | |
+| df | |
+| dir | |
+| dircolors | |
+| dirname | |
+| du | |
+| echo | |
+| env | |
+| expand | |
+| expr | |
+| factor | |
+| false | |
+| fmt | |
+| fold | |
+| groups | |
+| head | |
+| hostid | |
+| id | |
+| install | |
+| join | |
+| link | |
+| ln | |
+| logname | |
+| ls | |
+| md5sum | |
+| mkdir | |
+| mkfifo | |
+| mknod | |
+| mktemp | |
+| mv | |
+| nice | |
+| nohup | |
+| nl | |
+| od | |
+| paste | |
+| pathchk | |
+| pinky | |
+| ptx | |
+| pr | |
+| printenv | |
+| printf | |
+| pwd | |
+| readlink | |
+| rm | |
+| rmdir | |
+| runcon | |
+| seq | |
+| sha1sum | |
+| sha224sum | |
+| sha256sum | |
+| sha384sum | |
+| sha512sum | |
+| shred | |
+| shuf | |
+| sleep | |
+| sort | |
+| split | |
+| stat | |
+| stty | |
+| su | |
+| sum | |
+| sync | |
+| tac | |
+| tail | |
+| tee | |
+| touch | |
+| test | |
+| timeout | |
+| truncate | |
+| tr | |
+| true | |
+| tty | |
+| tsort | |
+| unexpand | |
+| uniq | |
+| uname | |
+| unlink | |
+| uptime | |
+| users | |
+| vdir | |
+| wc | |
+| who | |
+| whoami | |
+| yes | |
+
+
 ### Legal
 go-coreutils 0.1 is licensed under the GNU General Public License v3.
 
