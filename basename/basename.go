@@ -68,6 +68,8 @@ var (
 	version      = flag.Bool("version", false, version_text)
 )
 
+var requestedTerminator = "\n";  // gets set to null by the -z flag
+
 // If zeroLong is enabled, set zero to enabled.
 func processFlags() {
 	if *help {
@@ -87,6 +89,9 @@ func processFlags() {
 	if *suffixLong != "nil" {
 		*suffix = *suffixLong
 	}
+	if *zero {
+		requestedTerminator = string(0)
+	}
 }
 
 // A switch to check arguments and process them accordingly.
@@ -97,9 +102,9 @@ func argumentCheck() {
 	case flag.NArg() == 1: // If there is only one  argument
 		checkSuffix(getBaseName())
 	case flag.NArg() == 2 && suffixExists(): // If there is an argument and a suffix
-		fmt.Println(strings.TrimSuffix(getBaseName(), flag.Arg(len(flag.Args())-1)))
+		fmt.Print(strings.TrimSuffix(getBaseName(), flag.Arg(len(flag.Args())-1)), requestedTerminator)
 	case !*multiple: // If multiple is disabled but there is more than one argument
-		fmt.Println(getBaseName())
+		fmt.Print(getBaseName(), requestedTerminator)
 	case *multiple: // If multiple is enabled and there is more than one argument
 		multiFilePrinter()
 	}
@@ -113,9 +118,9 @@ func getBaseName() string {
 // Checks if a suffix is set and prints the basename accordingly.
 func checkSuffix(baseName string) {
 	if *suffix != "nil" {
-		fmt.Println(strings.TrimSuffix(baseName, *suffix))
+		fmt.Print(strings.TrimSuffix(baseName, *suffix), requestedTerminator)
 	} else {
-		fmt.Println(baseName)
+		fmt.Print(baseName, requestedTerminator)
 	}
 }
 
@@ -136,14 +141,10 @@ func suffixExists() bool {
 // Used in multiFilePrinter for checking if zeroMode is enabled.
 func checkZero(baseName string) {
 	switch {
-	case *suffix != "nil" && *zero:
-		fmt.Print(strings.TrimSuffix(baseName, *suffix))
 	case *suffix != "nil":
-		fmt.Println(strings.TrimSuffix(baseName, *suffix))
-	case *zero:
-		fmt.Print(baseName)
+		fmt.Print(strings.TrimSuffix(baseName, *suffix), requestedTerminator)
 	default:
-		fmt.Println(baseName)
+		fmt.Print(baseName, requestedTerminator)
 	}
 }
 
