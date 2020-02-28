@@ -49,12 +49,12 @@ binary sizes by 18.73% for this project (63.2 MiB to 51.4 MiB).
 | cp | not implemented |
 | csplit | not implemented |
 | cut | not implemented |
-| date | |
+| date | no, missing -d |
 | dd | not implemented |
 | df | not implemented |
 | dir | not implemented |
 | dircolors | not implemented |
-| dirname | |
+| dirname | yes, GNU version 8.30 |
 | du | not implemented |
 | echo | |
 | env | |

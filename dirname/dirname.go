@@ -16,13 +16,13 @@ import (
 const (
 	help_text = `
     usage: dirname [OPTION] NAME...
-    
+
     Output each NAME with its last non-slash component and trailing slashes
     removed; if NAME contains no /'s, output '.' (meaning the current directory).
 
         -help     display this help and exit
         -version  output version information and exit
-        
+
         -z, -zero
               separate output with NUL rather than newline
     `
@@ -31,7 +31,7 @@ const (
 
     Copyright (C) 2014, The GO-Coreutils Developers.
     This program comes with ABSOLUTELY NO WARRANTY; for details see
-    LICENSE. This is free software, and you are welcome to redistribute 
+    LICENSE. This is free software, and you are welcome to redistribute
     it under certain conditions in LICENSE.
 `
 	zero_text = "separate output with NUL rather than newline"
@@ -43,6 +43,8 @@ var (
 	zero     = flag.Bool("z", false, zero_text)
 	zeroLong = flag.Bool("zero", false, zero_text)
 )
+
+var requestedTerminator = "\n" // gets set to null by the -z flag
 
 // If zeroLong is enabled, set zero to enabled.
 func processFlags() {
@@ -56,6 +58,9 @@ func processFlags() {
 	if *help {
 		fmt.Println(help_text)
 		os.Exit(0)
+	}
+	if *zero {
+		requestedTerminator = string(0)
 	}
 }
 
@@ -73,11 +78,7 @@ func argumentCheck() {
 		os.Exit(0)
 	} else {
 		for _, file := range flag.Args() {
-			if *zero {
-				fmt.Print(getDirName(file))
-			} else {
-				fmt.Println(getDirName(file))
-			}
+			fmt.Print(getDirName(file), requestedTerminator)
 		}
 	}
 }
