@@ -6,3 +6,6 @@ make
 # Emacs files:
 *~
 \#*\#
+
+# Test output files:
+*/testfiles/output_test*_program*
