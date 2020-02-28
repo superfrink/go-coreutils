@@ -34,7 +34,7 @@ const (
 	-r, -reference=FILE
 	      display the last modification time of FILE
 
-	-R, -rfc-1123
+	-R, -rfc-email
 	      output date and time in RFC 1123 format.
 	      Example: Thu, 19 Jun 2014 03:53:45 -0500
 
@@ -70,7 +70,7 @@ var (
 	printISO8601      = flag.String("I", "", "output date and time in ISO 8601 format: [date|hours|minutes|seconds]")
 	printISO8601Long  = flag.String("iso-8601", "", "output date and time in ISO 8601 format: [date|hours|minutes|seconds]")
 	printRFC1123      = flag.Bool("R", false, "output date and time in RFC 2822 format.")
-	printRFC1123Long  = flag.Bool("rfc-1123", false, "output date and time in RFC 2822 format.")
+	printRFC1123Long  = flag.Bool("rfc-email", false, "output date and time in RFC 2822 format.")
 	printRFC3339      = flag.String("rfc-3339", "", "output date and time in RFC 3339 format: [date|seconds|ns]")
 	help              = flag.Bool("help", false, "display help information")
 	version           = flag.Bool("version", false, "output version information")
