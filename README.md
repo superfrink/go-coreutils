@@ -36,102 +36,102 @@ binary sizes by 18.73% for this project (63.2 MiB to 51.4 MiB).
 |   | GNU coreutils |
 |---|---------------|
 | arch | yes, GNU version 8.30 |
-| base64 | no, -d not handling invalid input |
+| base64 | no, -d does not handle invalid input |
 | basename | yes, GNU version 8.30 |
-| cat | |
-| chcon | |
-| chgrp | |
-| chown | |
-| chmod | |
-| chroot | |
-| cksum | |
-| comm | |
-| cp | |
-| csplit | |
-| cut | |
+| cat | no, missing -v for non-printable characters |
+| chcon | not implemented |
+| chgrp | not implemented |
+| chown | not implemented |
+| chmod | not implemented |
+| chroot | not implemented |
+| cksum | not implemented |
+| comm | not implemented |
+| cp | not implemented |
+| csplit | not implemented |
+| cut | not implemented |
 | date | |
-| dd | |
-| df | |
-| dir | |
-| dircolors | |
+| dd | not implemented |
+| df | not implemented |
+| dir | not implemented |
+| dircolors | not implemented |
 | dirname | |
-| du | |
+| du | not implemented |
 | echo | |
 | env | |
-| expand | |
+| expand | not implemented |
 | expr | |
 | factor | |
 | false | |
-| fmt | |
-| fold | |
+| fmt | not implemented |
+| fold | not implemented |
 | groups | |
 | head | |
-| hostid | |
-| id | |
-| install | |
-| join | |
-| link | |
-| ln | |
+| hostid | not implemented |
+| id | not implemented |
+| install | not implemented |
+| join | not implemented |
+| link | not implemented |
+| ln | not implemented |
 | logname | |
 | ls | |
 | md5sum | |
 | mkdir | |
-| mkfifo | |
-| mknod | |
-| mktemp | |
+| mkfifo | not implemented |
+| mknod | not implemented |
+| mktemp | not implemented |
 | mv | |
-| nice | |
-| nohup | |
-| nl | |
-| od | |
-| paste | |
-| pathchk | |
-| pinky | |
-| ptx | |
-| pr | |
-| printenv | |
-| printf | |
+| nice | not implemented |
+| nohup | not implemented |
+| nl | not implemented |
+| od | not implemented |
+| paste | not implemented |
+| pathchk | not implemented |
+| pinky | not implemented |
+| ptx | not implemented |
+| pr | not implemented |
+| printenv | not implemented |
+| printf | not implemented |
 | pwd | |
-| readlink | |
+| readlink | not implemented |
 | rm | |
 | rmdir | |
-| runcon | |
-| seq | |
+| runcon | not implemented |
+| seq | not implemented |
 | sha1sum | |
 | sha224sum | |
 | sha256sum | |
 | sha384sum | |
 | sha512sum | |
-| shred | |
-| shuf | |
+| shred | not implemented |
+| shuf | not implemented |
 | sleep | |
-| sort | |
-| split | |
+| sort | not implemented |
+| split | not implemented |
 | stat | |
-| stty | |
-| su | |
-| sum | |
+| stty | not implemented |
+| su | not implemented |
+| sum | not implemented |
 | sync | |
-| tac | |
+| tac | not implemented |
 | tail | |
 | tee | |
 | touch | |
-| test | |
-| timeout | |
-| truncate | |
-| tr | |
+| test | not implemented |
+| timeout | not implemented |
+| truncate | not implemented |
+| tr | not implemented |
 | true | |
-| tty | |
+| tty | not implemented |
 | tsort | |
-| unexpand | |
-| uniq | |
+| unexpand | not implemented |
+| uniq | not implemented |
 | uname | |
-| unlink | |
+| unlink | not implemented |
 | uptime | |
-| users | |
-| vdir | |
+| users | not implemented |
+| vdir | not implemented |
 | wc | |
-| who | |
+| who | not implemented |
 | whoami | |
 | yes | |
 
