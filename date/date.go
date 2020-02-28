@@ -12,6 +12,7 @@ import "os"
 import "time"
 
 const (
+	DEFAULT_FORMAT  = "Mon 2 Jan 15:04:05 MST 2006"
 	RFC3339_DATE    = "2006-01-02"
 	RFC3339_SECONDS = "2006-01-02 03:04:05-07:00"
 	RFC3339_NS      = "2006-01-02 03:04:05.999999999Z07:00"
@@ -120,7 +121,7 @@ func printDate(t time.Time) {
 	case *printISO8601 == "ns":
 		fmt.Println(t.Format(ISO8601_NS))
 	default:
-		fmt.Println(t.Format(time.UnixDate))
+		fmt.Println(t.Format(DEFAULT_FORMAT))
 	}
 }
 
