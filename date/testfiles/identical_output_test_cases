@@ -1,0 +1,17 @@
+#NO_ARGS_TEST#
+-u
+--utc
+--universal
+-R
+--rfc-email
+-d '2 days ago'
+--date='2 days ago'
+--date='3 months 1 day'
+--date='25 Dec' +%j
+'+%B %d'
+-d 1may '+%B %-d'
++%m%d%H%M%Y.%S
+--date='1970-01-01 00:02:00 +0000' +%s
+--date='1970-01-01 00:02:00' +%s
+-r ../date
+--reference=../date

@@ -1,0 +1,24 @@
+input1
+input1 input2
+input1 < input2
+input1 - < input2
+input1 - input1 < input2
+< input1
+-n input2
+-b input2
+--number-nonblank input2
+-n -b input2
+-b -n input2
+-s input2
+-n -s input2
+-E input2
+--show-ends input2
+-v input2
+--show-nonprinting input2
+-e input2
+-T input3
+--show-tabs input3
+-T -E input3
+-TE input3
+-u input2
+-A input2

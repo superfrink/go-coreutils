@@ -1,0 +1,9 @@
+foo
+/etc/hosts
+/etc/resolv.conf
+resolv.conf
+/usr/bin/sort
+include/stdio.h .h
+foo bar
+-z /foo/bar.baz
+-z -a any/str1 any/str2

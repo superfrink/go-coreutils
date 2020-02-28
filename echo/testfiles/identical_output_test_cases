@@ -1,0 +1,16 @@
+abc
+-n abc
+-E abc
+-n -E abc
+-nE abc
+-e "a\nb\n"
+"abc\\123"
+-e "abc\\123"
+-e "abc\\123\blmno"
+-e "abc\r\n123"
+-e "abc\t123"
+-e "abc\v123"
+-e "\0107\0157"
+-e "\x47\x6F"
+-e "\x47\x6f"
+abc 132
